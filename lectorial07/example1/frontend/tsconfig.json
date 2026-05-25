@@ -15,7 +15,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
+    "jsx": "react-jsx", //this must be set to react-jsx for React 17+ projects
     "incremental": true,
     "paths": {
       "@/*": [
