@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
 import { AppDataSource } from "../data-source";
-import { User } from "../entity/User";
+import { Week7User } from "../entity/User";
 
 export class UserController {
-  private userRepository = AppDataSource.getRepository(User);
+  private userRepository = AppDataSource.getRepository(Week7User);
 
   /**
    * Retrieves all users from the database
@@ -43,7 +43,7 @@ export class UserController {
   async save(request: Request, response: Response) {
     const { firstName, lastName, email, age } = request.body;
 
-    const user = Object.assign(new User(), {
+    const user = Object.assign(new Week7User(), {
       firstName,
       lastName,
       email,
