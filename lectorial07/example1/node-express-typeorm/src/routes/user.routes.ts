@@ -4,6 +4,10 @@ import { UserController } from "../controller/UserController";
 const router = Router();
 const userController = new UserController();
 
+router.get("/", async (req, res) => {
+  return res.json({ message: "Welcome to the User API" });
+});
+
 router.get("/users", async (req, res) => {
   await userController.all(req, res);
 });
